@@ -5,3 +5,6 @@
 /.vs
 /WindPlugin/obj
 /WindPlugin/bin/Debug/netstandard2.1
+/package/WindPlugin.dll
+/package/WindChanger.zip
+/package/README.md
