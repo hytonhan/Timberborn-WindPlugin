@@ -34,39 +34,38 @@ namespace WindPlugin
                 "WindMills", 
                 "MinRequiredWindmillWindStrength", 
                 0.3f, 
-                "The minimun wind strength when a Windmill will generate power").Value;
+                "The minimum wind strength when a regular Windmill will generate power").Value;
             MinRequiredLargeWindmillWindStrength = Config.Bind(
                 "WindMills", 
                 "MinRequiredLargeWindmillWindStrength", 
                 0.2f, 
-                "The minimun wind strength when a Large Windmill will generate power").Value;
+                "The maximum wind strength when a Large Windmill will generate power").Value;
             _minWindStrength = Config.Bind(
                 "Wind", 
                 "MinWindStrength", 
                 0f, 
-                "The minimun wind strength on a scale of 0-1.").Value;
+                "The minimum wind strength on a scale of 0-1.").Value;
             _maxWindStrength = Config.Bind(
                 "Wind", 
                 "MaxWindStrength", 
                 1f, 
-                "The minimun wind strength on a scale of 0-1.").Value;
+                "The maximum wind strength on a scale of 0-1.").Value;
             _minWindTimeInHours = Config.Bind(
                 "Wind", 
                 "MinWindTimeInHours", 
                 5f, 
-                "The minimun time it takes for wind to change.").Value;
+                "The minimum time it takes for wind to change in hours.").Value;
             _maxWindTimeInHours = Config.Bind(
                 "Wind", 
                 "MaxWindTimeInHours", 
                 12f, 
-                "The maximum time it takes for wind to change.").Value;
+                "The maximum time it takes for wind to change in hours.").Value;
 
             var harmony = new Harmony("hytone.plugins.windplugin");
             harmony.PatchAll();
 
-            Logger.LogInfo("WindPlugin is loaded.");
             TimberAPI.DependencyRegistry.AddConfigurator(new WindPluginConfigurator());
-            Logger.LogInfo("WindPlugin v2 is loaded.");
+            Logger.LogInfo("WindPlugin is loaded.");
         }
 
         /// <summary>
