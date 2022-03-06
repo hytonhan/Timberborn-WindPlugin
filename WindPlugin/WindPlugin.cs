@@ -77,13 +77,13 @@ namespace WindPlugin
         [HarmonyPatch(typeof(WindService), nameof(WindService.Load))]
         static bool OverrideWindValues()
         {
-            FieldInfo minWindStrengthField = typeof(WindService).GetField("MinWindStrength", BindingFlags.Static | BindingFlags.NonPublic);
+            FieldInfo minWindStrengthField = typeof(WindService).GetField(nameof(WindService.MinWindStrength), BindingFlags.Static | BindingFlags.NonPublic);
             minWindStrengthField.SetValue(null, _minWindStrength);
-            FieldInfo maxWindStrengthField = typeof(WindService).GetField("MaxWindStrength", BindingFlags.Static | BindingFlags.NonPublic);
+            FieldInfo maxWindStrengthField = typeof(WindService).GetField(nameof(WindService.MaxWindStrength), BindingFlags.Static | BindingFlags.NonPublic);
             maxWindStrengthField.SetValue(null, _maxWindStrength);
-            FieldInfo minWindTimeInHours = typeof(WindService).GetField("MinWindTimeInHours", BindingFlags.Static | BindingFlags.NonPublic);
+            FieldInfo minWindTimeInHours = typeof(WindService).GetField(nameof(WindService.MinWindTimeInHours), BindingFlags.Static | BindingFlags.NonPublic);
             minWindTimeInHours.SetValue(null, _minWindTimeInHours);
-            FieldInfo maxWindTimeInHours = typeof(WindService).GetField("MaxWindTimeInHours", BindingFlags.Static | BindingFlags.NonPublic);
+            FieldInfo maxWindTimeInHours = typeof(WindService).GetField(nameof(WindService.MaxWindTimeInHours), BindingFlags.Static | BindingFlags.NonPublic);
             maxWindTimeInHours.SetValue(null, _maxWindTimeInHours);
             return false;
         }
