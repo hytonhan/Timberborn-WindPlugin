@@ -1,10 +1,10 @@
 {
   "name": "WindChanger",
-  "version_number": "1.0.0",
+  "version_number": "1.1.1",
   "website_url": "https://github.com/hytonhan/Timberborn-WindPlugin",
   "description": "A mod that allows altering a some wind and windmill related values.",
   "dependencies": [
     "BepInEx-BepInExPack_Timberborn-5.4.19",
-    "Timberborn_Central-TimberAPI-0.2.1"
+    "Timberborn_Central-TimberAPI-0.3.0"
   ]
 }

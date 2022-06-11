@@ -1,4 +1,5 @@
-﻿using Timberborn.PowerGenerating;
+﻿using System.Reflection;
+using Timberborn.PowerGenerating;
 using TimberbornAPI.EntityActionSystem;
 using UnityEngine;
 
@@ -6,6 +7,9 @@ namespace WindPlugin
 {
     public class WindPoweredGeneratorEntityAction : IEntityAction
     {
+        private readonly string _minWindFieldName1 = "MinRequiredWindStrength";
+        private readonly string _minWindFieldName2 = "_minRequiredWindStrength";
+
         /// <summary>
         /// This method can be used to change the behaviour of any entity in the game.
         /// Now we're using it to overwrite the values of Windmills' minimum wind strength
@@ -18,15 +22,32 @@ namespace WindPlugin
             {
                 return;
             }
-            
-            if(windPoweredGenerator.name.StartsWith("LargeWindmill"))
+
+            if (windPoweredGenerator.name.StartsWith("LargeWindmill"))
             {
-                windPoweredGenerator.MinRequiredWindStrength = WindPlugin.MinRequiredLargeWindmillWindStrength;
+                var field = GetMinWindStrengthField(windPoweredGenerator);
+                field.SetValue(windPoweredGenerator, WindPlugin.MinRequiredLargeWindmillWindStrength);
             }
-            else if(windPoweredGenerator.name.StartsWith("Windmill"))
+            else if (windPoweredGenerator.name.StartsWith("Windmill"))
             {
-                windPoweredGenerator.MinRequiredWindStrength = WindPlugin.MinRequiredWindmillWindStrength;
+                var field = GetMinWindStrengthField(windPoweredGenerator);
+                field.SetValue(windPoweredGenerator, WindPlugin.MinRequiredWindmillWindStrength);
             }
+        }
+
+        private FieldInfo GetMinWindStrengthField(WindPoweredGenerator windPoweredGenerator)
+        {
+            var field = windPoweredGenerator.GetType()
+                                             .GetField(_minWindFieldName1,
+                                                       BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
+
+            if (field == null)
+            {
+                field = windPoweredGenerator.GetType()
+                                             .GetField(_minWindFieldName2,
+                                                       BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
+            }
+            return field;
         }
     }
 }

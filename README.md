@@ -18,3 +18,9 @@ The default values are the same as in the base game. Change these to whatever as
 Recommended way to install this mod is through [Thunderstore](https://timberborn.thunderstore.io/). If you want to install
 manually or some other way, then you are on your own. I know likely less about these things
 than you.
+
+## Changelog
+
+### v1.1.1 - 11.6.2022
+- Modified so mod works in stable and golem experimental
+- Updded TimberAPI dependency from 0.2.1 to 0.3.0

@@ -9,7 +9,7 @@ namespace WindPlugin
     /// <summary>
     /// This class holds all the initial stuff to do in startup
     /// </summary>
-    [BepInPlugin("hytone.plugins.windplugin", "WindPlugin", "1.1.0")]
+    [BepInPlugin("hytone.plugins.windplugin", "WindPlugin", "1.1.1")]
     [BepInDependency("com.timberapi.timberapi")]
     [BepInProcess("Timberborn.exe")]
     [HarmonyPatch]
