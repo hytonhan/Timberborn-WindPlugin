@@ -2,7 +2,7 @@
 Are you tired of your windmills not running? Well you should be! But not to worry, with this
 mod you can alter some wind and windmill values so that your windmills can always produce power!
 
-## Usage
+# Usage
 Once you have installed the mod, run the game once and exit. In your bepinex folder there should
 now be a config file for this mod. The config has 6 different variables
 * MinRequiredWindmillWindStrength: The minimun required wind strength when regular windmills will generate power (default: 0.3)
@@ -14,13 +14,17 @@ now be a config file for this mod. The config has 6 different variables
 
 The default values are the same as in the base game. Change these to whatever as you desire. Results may wary.
 
-## Installing
+# Installing
 Recommended way to install this mod is through [Thunderstore](https://timberborn.thunderstore.io/). If you want to install
 manually or some other way, then you are on your own. I know likely less about these things
 than you.
 
-## Changelog
+# Changelog
 
-### v1.1.1 - 11.6.2022
+## v2.0.0 - 23.9.2022
+- Updated to work with TimberAPI v0.5
+- Refactored code heavily
+
+## v1.1.1 - 11.6.2022
 - Modified so mod works in stable and golem experimental
 - Updded TimberAPI dependency from 0.2.1 to 0.3.0

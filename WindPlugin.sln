@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution items", "Solution items", "{578A7F61-BC41-4C0C-AB82-D563135CA690}"
 	ProjectSection(SolutionItems) = preProject
 		package\manifest.json = package\manifest.json
+		package\WindChanger\plugins\mod.json = package\WindChanger\plugins\mod.json
 		README.md = README.md
 	EndProjectSection
 EndProject

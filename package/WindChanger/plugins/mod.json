@@ -1,0 +1,8 @@
+{
+  "Name": "WindPlugin",
+  "Version": "2.0.0",
+  "UniqueId": "hytone.plugins.windplugin",
+  "MinimumApiVersion": "0.0.0",
+  "MinimumGameVersion": "0.2.8",
+  "EntryDll": "WindPlugin.dll"
+}
