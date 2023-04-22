@@ -21,6 +21,11 @@ than you.
 
 # Changelog
 
+## v2.1.0 - 22.4.2023
+- Removed all deps to BepInEx
+- Config system now used TimberAPI configs
+- Updated to work with game v0.4.1.1
+
 ## v2.0.0 - 23.9.2022
 - Updated to work with TimberAPI v0.5
 - Refactored code heavily
