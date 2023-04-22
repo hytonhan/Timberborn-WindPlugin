@@ -9,3 +9,5 @@
 /package/WindChanger.zip
 /package/README.md
 *.zip
+/package/WindChanger/plugins/WindPlugin.dll
+/package/WindChanger/plugins/WindPlugin.dll
